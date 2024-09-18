@@ -1,2 +1,2 @@
-ALTER TABLE countries
-ALTER COLUMN country_name SET DEFAULT 'Kazakhstan';
+INSERT INTO countries (region_id, population)
+VALUES (4, 19000000);
