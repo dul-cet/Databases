@@ -1,2 +1,5 @@
 INSERT INTO countries (country_name, region_id, population)
-VALUES ('Australia', NULL, 25000000);
+VALUES
+    ('France', 3, 67000000),
+    ('Germany', 3, 83000000),
+    ('Italy', 3, 60000000);
