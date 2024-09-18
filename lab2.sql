@@ -1,6 +1,2 @@
-CREATE TABLE countries (
-    country_id SERIAL PRIMARY KEY,
-    country_name VARCHAR(100),
-    region_id INTEGER,
-    population INTEGER
-);
+INSERT INTO countries (country_name, region_id, population)
+VALUES ('Canada', 2, 38000000);
