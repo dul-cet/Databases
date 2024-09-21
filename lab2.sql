@@ -1,1 +1,2 @@
-CREATE TABLE countries_new (LIKE countries INCLUDING ALL);
+INSERT INTO countries_new
+SELECT * FROM countries;
