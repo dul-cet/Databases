@@ -1,2 +1,3 @@
-SELECT country_name, population * 1.10 AS "New Population"
-FROM countries;
+DELETE FROM countries
+WHERE population < 100000
+RETURNING *;
