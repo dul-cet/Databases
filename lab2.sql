@@ -1,1 +1,1 @@
-INSERT INTO countries DEFAULT VALUES;
+CREATE TABLE countries_new (LIKE countries INCLUDING ALL);
