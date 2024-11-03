@@ -13,13 +13,13 @@ CREATE TABLE countries (
 INSERT INTO countries (country_name, region_id, population)
 VALUES ('Canada', 2, 38000000);
 
--- 4. Insert a row with country_name only
-INSERT INTO countries (country_name)
-VALUES ('Japan');
+-- 4. Insert a row with country_name and id
+INSERT INTO countries (country_name, country_id)
+VALUES ('Japan', 2);
 
 -- 5. Insert NULL into region_id
-INSERT INTO countries (country_name, region_id, population)
-VALUES ('Australia', NULL, 25000000);
+INSERT INTO countries (country_name, country_id, region_id, population)
+VALUES ('Australia',3, NULL, 25000000);
 
 -- 6. Insert 3 rows with a single statement
 INSERT INTO countries (country_name, region_id, population)
@@ -33,8 +33,8 @@ ALTER TABLE countries
 ALTER COLUMN country_name SET DEFAULT 'Kazakhstan';
 
 -- 8. Insert default value for country_name
-INSERT INTO countries (region_id, population)
-VALUES (4, 19000000);
+INSERT INTO countries (country_name)
+VALUES (DEFAULT);
 
 -- 9. Insert only default values
 INSERT INTO countries DEFAULT VALUES;
