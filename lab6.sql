@@ -55,7 +55,7 @@ VALUES
 -- 3. Select the first name, last name, department id, and department name for each employee
 SELECT employees.first_name, employees.last_name, employees.department_id, departments.department_name
 FROM employees
-JOIN departments ON employees.department_id = departments.department_id;
+LEFT JOIN departments ON employees.department_id = departments.department_id;
 
 -- 4. Select the first name, last name, department id and department name for employees in departments 80 or 40
 SELECT employees.first_name, employees.last_name, employees.department_id, departments.department_name
