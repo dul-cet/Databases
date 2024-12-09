@@ -91,16 +91,10 @@ DECLARE
 BEGIN
     SELECT salary INTO current_salary FROM employees WHERE id = emp_id;
 
-    IF current_salary IS NULL THEN
-        RAISE EXCEPTION 'Employee with ID % does not exist', emp_id;
-    END IF;
-
     bonus := calculate_bonus(current_salary);
 
     UPDATE employees SET salary = salary + bonus WHERE id = emp_id;
 
-    RAISE NOTICE 'Salary updated for Employee ID %: Bonus = %, New Salary = %',
-                 emp_id, bonus, current_salary + bonus;
 END;
 $$ LANGUAGE plpgsql;
 
